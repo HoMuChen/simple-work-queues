@@ -35,7 +35,7 @@ dispatcher.js
 const { Producer } = require('simple-work-queues');
 const { fn1, fn2 } = require('./tasks'); // import functions from whereever you want
 
-const producer(config); // config is the same with the one in worker.js
+const producer = Producer(config); // config is the same with the one in worker.js
 
 producer.delay(fn1)(); //wrap your function and call it whenever u want
 producer.delay(fn2)();
