@@ -1,0 +1,26 @@
+{
+  "name": "simple-work-queues",
+  "version": "0.0.2",
+  "description": "Delay your functions to queues backed by RabbitMQ",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HoMuChen/simple-work-queues.git"
+  },
+  "keywords": [
+    "message queue",
+    "rabbitmq",
+    "nodejs"
+  ],
+  "author": "HoMuChen",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.2"
+  },
+  "bugs": {
+    "url": "https://github.com/HoMuChen/simple-work-queues/issues"
+  },
+  "homepage": "https://github.com/HoMuChen/simple-work-queues#readme"
+}
