@@ -17,6 +17,8 @@ const { fn1, fn2 } = require('./tasks'); // import functions from whereever you 
 
 const config = {
   brokerUrl: 'your-rabbitmq-broker-url',
+  noAck: false, //boolean
+  prefetch: 1, //concurrency for every worker, default 1, only useful when noAck is false
   routes: {
     queue1: fn1,
     queue2: fn2,

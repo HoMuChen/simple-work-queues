@@ -3,7 +3,7 @@ const amqp = require('amqplib');
 function Producer(config) {
 
   const BROKER_URL = config.brokerURL;
-  const noAck = config.noAck || true;
+  const noAck = config.noAck;
   const routes = config.routes;
 
   function delay(fn) {
@@ -30,7 +30,6 @@ function Producer(config) {
       .then(conn => Promise.all([conn.createChannel(), Promise.resolve(conn)]))
       .then(([channel, conn]) => {
         channel.assertQueue(queue);
-        channel.prefetch(1);
         
         setTimeout(() => conn.close(), 500);
         return channel.sendToQueue(queue, new Buffer(message))

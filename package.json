@@ -1,6 +1,6 @@
 {
   "name": "simple-work-queues",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Delay your functions to queues backed by RabbitMQ",
   "main": "index.js",
   "scripts": {
