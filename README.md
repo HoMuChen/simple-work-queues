@@ -28,7 +28,7 @@ const config = {
 const worker = Worker(config);
 
 worker.listen('queue1');
-worker.listen('queue2');
+worker.listen('queue2', (err, data) => {console.log(data)}); //add callback function(optional), data is what returned by your function
 
 ```
 

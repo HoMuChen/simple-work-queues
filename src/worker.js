@@ -19,7 +19,7 @@ function Worker(config) {
   }
 
   function run(channel, queue, callback) {
-    return function(msg) {
+    return async function(msg) {
       const doc = JSON.parse(msg.content.toString());
       const fnName = doc.fnName;
       const parameters = doc.parameters;
